@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Design page</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="design-container">
+      <main>
+        <header class="main-title">
+          <h1>PROJECT SETUP</h1>
+          <div>
+            <h3>How to</h3>
+
+            <p class="text">The main setup is done in _vars.scss file.</p>
+
+            <h4>Fonts</h4>
+
+            <p class="text">
+              Add fonts for project, one for header and one for body, you can
+              use @font-face or import. Next tweek <strong>fonts</strong> map to
+              suit your needs - set font-familly, weights, headers and text
+              sizes. In the fonts map is <code>ms-base-ratio</code> variable
+              witch is use to setup base font size using modular scale and
+              fluid-type mixin you can use
+              <a href="https://www.modularscale.com">modular scale</a> to change
+              it. The last thing is to setup media query sizes for minimum and
+              maximum where the base font will be calculated between.
+            </p>
+
+            <h4>Colors</h4>
+
+            <p class="text">
+              Setting up colors for the project is strait forward just change
+              colors of the sass variables and you are done. In addition you can
+              tweek percentage in <strong>collors</strong> map to setup shades
+              for <code>interactive</code> color.
+            </p>
+
+            <h4>Media queries</h4>
+
+            <p class="text">
+              In the <strong>mq</strong> map you are seting up media queries
+              sizes you want to use in the project.
+            </p>
+
+            <h4>Dimensions</h4>
+
+            <p class="text">
+              In the <strong>dimensions</strong> map you are seting up global
+              dimensions for project/components eg. logo width, hamburger icon,
+              form and any value you need to use globaly.
+            </p>
+
+            <br />
+            <p class="text">
+              <i
+                >In addition values from <strong>color</strong> and
+                <strong>dimensions</strong> map will be change to css variables
+                in <code>:root</code> element as well as calculated base
+                font.</i
+              >
+            </p>
+
+            <br />
+            <p class="text">
+              <strong
+                >It's all for the beer minimum - now start
+                <code>gulp dev</code> or <code>npm start</code> and check
+                design.html to see your changes</strong
+              >
+            </p>
+            <br />
+            <p class="text">
+              If you need to do more changes fell free to do so. My sugestion is
+              to start with the commopnents - the rest is up to you :)
+            </p>
+          </div>
+        </header>
+        <div class="colorBox">
+          <h1>COLORS</h1>
+          <div class="colors">
+            <div class="cBox cBox-full c-brand-one">c-brand-one</div>
+            <div class="cBox cBox-full c-brand-two">c-brand-two</div>
+
+            <hr />
+
+            <div class="cBox cBox-left c-black">c-black</div>
+            <div class="cBox cBox-right c-white">c-white</div>
+
+            <hr />
+
+            <div class="cBox cBox-full c-light-grey">c-light-grey</div>
+            <div class="cBox cBox-full c-medium-grey">c-medium-grey</div>
+            <div class="cBox cBox-full c-dark-grey">c-dark-grey</div>
+
+            <hr />
+
+            <div class="cBox cBox-full c-error">c-error</div>
+            <div class="cBox cBox-full c-success">c-success</div>
+            <div class="cBox cBox-left c-disable-light">c-disable-light</div>
+            <div class="cBox cBox-right c-disable-dark">c-disable-dark</div>
+
+            <hr />
+
+            <div class="cBox cBox-full c-interactive-light-2">
+              c-interactive-light-2
+            </div>
+            <div class="cBox cBox-full c-interactive-light-1">
+              c-interactive-light-1
+            </div>
+            <div class="cBox cBox-full c-interactive">c-interactive</div>
+            <div class="cBox cBox-full c-interactive-dark-1">
+              c-interactive-dark-1
+            </div>
+            <div class="cBox cBox-full c-interactive-dark-2">
+              c-interactive-dark-2
+            </div>
+          </div>
+        </div>
+
+        <div class="fontBox">
+          <h1>TYPOGRAPHY</h1>
+          <div class="fonts">
+            <h4>Header font - Cormorant Upright</h4>
+            <p class="text">Body font - Barlow</p>
+            <p class="text">fw-normal - 400</p>
+            <p class="text text--bold">fw-bold - 700</p>
+
+            <hr />
+
+            <h1>h1 - The quick brown fox jumps over the lazy dog</h1>
+            <h2>h2 - The quick brown fox jumps over the lazy dog</h2>
+            <h3>h3 - The quick brown fox jumps over the lazy dog</h3>
+            <h4>h4 - The quick brown fox jumps over the lazy dog</h4>
+            <h5>h5 - The quick brown fox jumps over the lazy dog</h5>
+            <h6>h6 - The quick brown fox jumps over the lazy dog</h6>
+            <p class="text">
+              <strong>text</strong>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate reiciendis, similique, dolorem ea amet aut laborum
+              perspiciatis ipsum minima consequatur nesciunt quo necessitatibus
+              alias aliquam ullam, reprehenderit quae velit laudantium.
+            </p>
+            <p class="text text--s">
+              <strong>text--s</strong>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate reiciendis, similique, dolorem ea amet aut laborum
+              perspiciatis ipsum minima consequatur nesciunt quo necessitatibus
+              alias aliquam ullam, reprehenderit quae velit laudantium.
+            </p>
+            <p class="text text--xs">
+              <strong>text--xs</strong>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate reiciendis, similique, dolorem ea amet aut laborum
+              perspiciatis ipsum minima consequatur nesciunt quo necessitatibus
+              alias aliquam ullam, reprehenderit quae velit laudantium.
+            </p>
+          </div>
+        </div>
+
+        <div class="componentsBox">
+          <h1>COMPONENTS</h1>
+          <div class="components">
+            <div class="component">
+              <h4>Logo</h4>
+              <a href="#" class="logo logo__link">
+                <img
+                  src="./assets/images/icons/logo.png"
+                  alt="Logo"
+                  srcset=""
+                  class="logo__image"
+                />
+              </a>
+            </div>
+
+            <hr />
+
+            <div class="component">
+              <h4>Hamburger</h4>
+              <button class="hamburger">
+                <span class="hamburger__line"></span>
+              </button>
+            </div>
+
+            <hr />
+
+            <div class="component">
+              <h4>Button and link</h4>
+              <button class="btn">button</button>
+              <br />
+              <a href="#" class="btn">link button</a>
+              <br />
+              <a href="#" class="text text--link">link text</a>
+            </div>
+
+            <hr />
+
+            <div class="component">
+              <h4>Form</h4>
+              <form action="" method="post" class="form">
+                <label for="username" class="text text--xs form__label"
+                  >Name:
+                  <abbr title="required" class="form__abbr">*</abbr></label
+                >
+                <input
+                  id="username"
+                  type="text"
+                  name="username"
+                  placeholder="username"
+                  class="text form__text"
+                />
+
+                <label for="email" class="text text--xs form__label"
+                  >Email:
+                  <abbr title="required" class="form__abbr">*</abbr></label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="email@domain.com"
+                  class="text form__email"
+                />
+
+                <label for="message" class="text text--xs form__label"
+                  >Message:
+                  <abbr title="required" class="form__abbr">*</abbr></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="message"
+                  rows="4"
+                  class="text form__textarea"
+                ></textarea>
+
+                <button type="submit" class="btn form__button">Send</button>
+              </form>
+
+              <br /><br />
+
+              <form action="" method="post" class="form">
+                <label for="username" class="text text--xs form__label"
+                  >Name:
+                  <abbr title="required" class="form__abbr">*</abbr></label
+                >
+                <input
+                  id="username"
+                  type="text"
+                  name="username"
+                  placeholder="username"
+                  class="text form__text form__text--success"
+                />
+
+                <label for="email" class="text text--xs form__label"
+                  >Email:
+                  <abbr title="required" class="form__abbr">*</abbr></label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="email@domain.com"
+                  class="text form__email form__email--error"
+                />
+
+                <label for="message" class="text text--xs form__label"
+                  >Message:
+                  <abbr title="required" class="form__abbr">*</abbr></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="message"
+                  rows="4"
+                  class="text form__textarea form__textarea--disable-light"
+                  disabled
+                ></textarea>
+
+                <button type="submit" class="btn form__button">Send</button>
+              </form>
+            </div>
+
+            <hr />
+
+            <div class="component">
+              <h4>Navigation</h4>
+              <nav class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href class="navigation__link">Item link 1</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href class="navigation__link">Item link 2</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href class="navigation__link">Item link 3</a>
+                  </li>
+                </ul>
+              </nav>
+              <br /><br />
+              <nav class="navigation navigation--horizontal">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href class="navigation__link">Item link 1</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href class="navigation__link">Item link 2</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href class="navigation__link">Item link 3</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
