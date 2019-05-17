@@ -1,0 +1,19 @@
+# VSC workspace
+*.code-workspace
+
+# Temporary files
+archive/
+
+# Local VSC history
+.history/
+
+# Mac OSX
+.DS_Store
+
+# Node
+node_modules/
+logs
+*.log
+.npm
+.env
+.nuxt
