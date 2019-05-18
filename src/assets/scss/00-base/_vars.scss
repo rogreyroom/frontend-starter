@@ -32,3 +32,33 @@
   font-weight: 600;
   font-style: normal;
 }
+
+$fonts: (
+  ff-body: (
+    "'Barlow'",
+    sans-serif,
+  ),
+  ff-header: (
+    "'Cormorant Upright'",
+    sans-serif,
+  ),
+  fw-normal: 400,
+  fw-med-bold: 600,
+  fw-bold: 700,
+  fs-base: 16px,
+  fs-h1: 2rem,
+  fs-h2: 1.5rem,
+  fs-h3: 1.17rem,
+  fs-h4: 1rem,
+  fs-h5: 0.83rem,
+  fs-h6: 0.67rem,
+  fs-text: 1rem,
+  fs-s: 0.83rem,
+  fs-xs: 0.67rem,
+  ms-base-ratio: 1.067,
+);
+
+$fs-mq: (
+  small: 320px,
+  large: 1200px,
+);
