@@ -1,0 +1,30 @@
+// Page header
+.top-bar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(1rem, auto) var(--logo-width) minmax(
+      min-content,
+      calc(#{map-get($mq, wide)} - var(--logo-width) - 2rem)
+    ) minmax(1rem, auto);
+  grid-template-rows: auto;
+  grid-template-areas: '. logo nav .';
+
+  // Showcase purpose
+  background: palegreen;
+
+  &__logo {
+    grid-area: logo;
+    justify-self: start;
+
+    // Showcase purpose
+    background: peru;
+  }
+
+  &__nav {
+    grid-area: nav;
+    justify-self: end;
+
+    // Showcase purpose
+    background: palevioletred;
+  }
+}
