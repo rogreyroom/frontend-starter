@@ -107,3 +107,16 @@ $mq: (
   mega: 1800px,
   ultra: 2800px,
 );
+
+// --Dimensions--
+$dimensions: (
+  logo-width: 3rem,
+  menu-ico-width: 22px,
+  menu-ico-line-height: 2px,
+  menu-ico-lines-space: 6px,
+  menu-ico-padding: 14px,
+  form-padding: 1rem,
+  form-input-padding: 2px,
+  form-bg-color: $c-light-grey,
+  form-width: 350px,
+);
