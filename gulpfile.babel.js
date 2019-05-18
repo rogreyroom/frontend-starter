@@ -15,6 +15,7 @@ const bsCreate = bSync.create();
 const paths = {
   public: {
     del: 'public/**',
+    design: 'public/assets/css/design.min.css',
   },
   styles: {
     src: 'src/assets/scss/**/*.{scss,sass}',
@@ -39,6 +40,7 @@ const paths = {
 };
 
 export const clean = () => del([paths.public.del]);
+export const buildClean = () => del([paths.public.design])
 
 function bs() {
   return bsCreate.init({
@@ -111,8 +113,9 @@ function watch() {
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, scripts, images, fonts, html),
-);
+  gulp.parallel(gulp.series(styles, buildClean), scripts, images, fonts, html)
+)
+  
 export default build;
 
 export const dev = gulp.series(build, gulp.parallel(watch, bs));
