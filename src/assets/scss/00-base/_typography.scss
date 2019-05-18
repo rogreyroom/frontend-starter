@@ -1,0 +1,18 @@
+// --Typography--
+//Setup min and max base font size for website using modular scale https://www.modularscale.com/
+$min-body-font: map-get($fonts, fs-base);
+$max-body-font: ms-size(
+  map-get($fonts, fs-base),
+  map-get($fonts, ms-base-ratio),
+  3
+);
+
+// Font size :root css variables
+:root {
+  @include fluid-type(
+    map-get($fs-mq, small),
+    map-get($fs-mq, large),
+    $min-body-font,
+    $max-body-font
+  );
+}
