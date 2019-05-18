@@ -42,3 +42,9 @@
 
   @return round((($base-font * $wyn) / $ms-ratio) * 1000) / 1000;
 }
+
+// Fallback mixin for css  properties
+@mixin var($property, $variable) {
+  #{$property}: map-get($vars, $variable);
+  #{$property}: var(--#{$variable});
+}
