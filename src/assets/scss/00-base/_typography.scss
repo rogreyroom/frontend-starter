@@ -33,3 +33,28 @@ h5,
 h6 {
   font-weight: var(--fw-bold);
 }
+
+// General font size class
+.text {
+  font-size: map-get($fonts, fs-text);
+
+  &--s {
+    font-size: map-get($fonts, fs-s);
+  }
+
+  &--xs {
+    font-size: map-get($fonts, fs-xs);
+  }
+
+  &--bold {
+    font-weight: var(--fw-bold);
+  }
+
+  &--link {
+    color: var(--c-interactive-dark-1);
+
+    &:hover {
+      color: var(--c-interactive-dark-2);
+    }
+  }
+}
