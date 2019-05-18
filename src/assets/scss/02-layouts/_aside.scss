@@ -1,0 +1,14 @@
+// Page main aside
+.aside {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(1rem, auto) minmax(
+      max-content,
+      calc(#{map-get($mq, wide)} - 2rem)
+    ) minmax(1rem, auto);
+  grid-template-rows: auto;
+  grid-template-areas: '. content .';
+
+  // Showcase purpose
+  background: maroon;
+}

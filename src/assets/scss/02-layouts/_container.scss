@@ -1,0 +1,15 @@
+// Page wrapper
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  // Showcase purpose
+  background: pink;
+}
+
+// Wraper to center content on page and have grid like: auto margin | (auto, fix width) content | auto margin
+.content {
+  grid-area: content;
+}
