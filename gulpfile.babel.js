@@ -63,6 +63,13 @@ export function styles() {
         }),
       )
       .pipe(gulp.dest(paths.styles.dest))
+      .pipe(
+        rename({
+          basename: 'design',
+          suffix: '.min',
+        }),
+      )
+      .pipe(gulp.dest(paths.styles.dest))
       .pipe(bsCreate.stream())
   );
 }
