@@ -1,0 +1,57 @@
+.form {
+  --padding: var(--form-padding);
+  --input-padding: var(--form-input-padding);
+  --width: var(--form-width);
+  --label-color: var(--c-disable-dark);
+  --bg-color: var(--c-light-grey);
+
+  border: none;
+  padding: var(--padding);
+  background: var(--bg-color);
+  width: var(--width);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__text,
+  &__textarea,
+  &__email,
+  &__password {
+    padding: var(--input-padding);
+    border: none;
+    border-bottom: 1px solid var(--c-disable-light);
+    background: var(--c-light-grey);
+    margin-bottom: 0.8rem;
+
+    &--success {
+      border: 1px solid var(--c-success);
+    }
+
+    &--error {
+      border: 1px solid var(--c-error);
+    }
+
+    &--disable-light {
+      background: var(--c-disable-light);
+      border: 1px solid var(--c-disable-light);
+    }
+
+    &--disable-dark {
+      background: var(--c-disable-dark);
+      border: 1px solid var(--c-disable-dark);
+    }
+  }
+
+  &__label {
+    color: var(--label-color);
+  }
+
+  &__abbr {
+    color: var(--c-error);
+    text-decoration: none;
+  }
+
+  &__button {
+    margin-top: 1rem;
+  }
+}

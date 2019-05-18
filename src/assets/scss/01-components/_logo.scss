@@ -1,0 +1,15 @@
+.logo {
+  --width: var(--logo-width);
+  --padding: 2px;
+
+  display: inline-block;
+  width: var(--width);
+
+  &__link {
+    padding: var(--padding);
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
