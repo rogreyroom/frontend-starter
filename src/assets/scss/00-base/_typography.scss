@@ -16,3 +16,20 @@ $max-body-font: ms-size(
     $max-body-font
   );
 }
+
+html,
+body {
+  font-size: var(--fs-base);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-normal);
+  @include var(color, c-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-bold);
+}
