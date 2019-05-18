@@ -32,3 +32,13 @@
     }
   }
 }
+
+// Calculates max font size for giving modular scale number (https://www.modularscale.com/)
+@function ms-size($base-font, $ms-ratio, $ms) {
+  $wyn: 1;
+  @for $var from 0 through $ms {
+    $wyn: $wyn * $ms-ratio;
+  }
+
+  @return round((($base-font * $wyn) / $ms-ratio) * 1000) / 1000;
+}
