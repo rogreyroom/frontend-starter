@@ -1,0 +1,28 @@
+.btn {
+  --bg-color: var(--c-interactive);
+  --color: black;
+  --font-name: var(--ff-body);
+  --font-size: 1rem;
+  --font-weight: var(--fw-normal);
+  --btn-padding: 0.75em 1em;
+  --btn-margin-bottom: 0.5rem;
+
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  background: var(--bg-color);
+  color: var(--color);
+  font-family: var(--font-name);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  padding: var(--btn-padding);
+  line-height: var(--font-size);
+  margin-bottom: var(--btn-margin-bottom);
+
+  &:hover {
+    --bg-color: var(--c-interactive-light-1);
+    background: var(--bg-color);
+  }
+}
