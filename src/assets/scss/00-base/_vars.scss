@@ -120,3 +120,18 @@ $dimensions: (
   form-bg-color: $c-light-grey,
   form-width: 350px,
 );
+
+// CSS variables
+$vars: map-merge($colors, $dimensions);
+
+:root {
+  --ff-body: #{map-get($fonts, ff-body)};
+  --ff-header: #{map-get($fonts, ff-header)};
+  --fw-normal: #{map-get($fonts, fw-normal)};
+  --fw-med-bold: #{map-get($fonts, fw-med-bold)};
+  --fw-bold: #{map-get($fonts, fw-bold)};
+
+  @each $property, $value in $vars {
+    --#{$property}: #{$value};
+  }
+}
