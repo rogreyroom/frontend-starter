@@ -62,3 +62,19 @@ $fs-mq: (
   small: 320px,
   large: 1200px,
 );
+
+// --Colors--
+$c-brand-one: #93d547;
+$c-brand-two: #fff629;
+
+$c-white: #fafafa;
+$c-light-grey: #eaeaea;
+$c-medium-grey: #979797;
+$c-dark-grey: #2f2f2f;
+$c-black: #1b1b1b;
+
+$c-error: #ff4d4d;
+$c-success: #4dff4d;
+$c-disable: $c-medium-grey;
+
+$c-interactive: $c-brand-one;
