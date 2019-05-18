@@ -78,3 +78,22 @@ $c-success: #4dff4d;
 $c-disable: $c-medium-grey;
 
 $c-interactive: $c-brand-one;
+
+$colors: (
+  c-brand-one: $c-brand-one,
+  c-brand-two: $c-brand-two,
+  c-white: $c-white,
+  c-light-grey: $c-light-grey,
+  c-medium-grey: $c-medium-grey,
+  c-dark-grey: $c-dark-grey,
+  c-black: $c-black,
+  c-error: $c-error,
+  c-success: $c-success,
+  c-disable-light: lighten($c-disable, 20%),
+  c-disable-dark: darken($c-disable, 30%),
+  c-interactive-light-2: lighten($c-interactive, 12%),
+  c-interactive-light-1: lighten($c-interactive, 8%),
+  c-interactive: $c-interactive,
+  c-interactive-dark-1: darken($c-interactive, 8%),
+  c-interactive-dark-2: darken($c-interactive, 12%),
+);
