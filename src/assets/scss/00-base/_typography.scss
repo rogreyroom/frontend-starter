@@ -1,0 +1,60 @@
+// --Typography--
+//Setup min and max base font size for website using modular scale https://www.modularscale.com/
+$min-body-font: map-get($fonts, fs-base);
+$max-body-font: ms-size(
+  map-get($fonts, fs-base),
+  map-get($fonts, ms-base-ratio),
+  3
+);
+
+// Font size :root css variables
+:root {
+  @include fluid-type(
+    map-get($fs-mq, small),
+    map-get($fs-mq, large),
+    $min-body-font,
+    $max-body-font
+  );
+}
+
+html,
+body {
+  font-size: var(--fs-base);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-normal);
+  @include var(color, c-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-bold);
+}
+
+// General font size class
+.text {
+  font-size: map-get($fonts, fs-text);
+
+  &--s {
+    font-size: map-get($fonts, fs-s);
+  }
+
+  &--xs {
+    font-size: map-get($fonts, fs-xs);
+  }
+
+  &--bold {
+    font-weight: var(--fw-bold);
+  }
+
+  &--link {
+    color: var(--c-interactive-dark-1);
+
+    &:hover {
+      color: var(--c-interactive-dark-2);
+    }
+  }
+}

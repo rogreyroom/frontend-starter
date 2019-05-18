@@ -1,0 +1,137 @@
+// Fonts
+//Link to change fonts to webfonts: https://fontsquirrel.com
+
+@font-face {
+  font-family: "'Barlow'";
+  src: url('./fonts/barlow-regural-webfont.woff2') format('woff2'),
+    url('./fonts/barlow-regural-webfontwoff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "'Barlow'";
+  src: url('./fonts/barlow-bold-webfont.woff2') format('woff2'),
+    url('./fonts/barlow-bold-webfontwoff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "'Cormorant Upright'";
+  src: url('./fonts/cormorantupright-regular-webfont.woff2') format('woff2'),
+    url('./fonts/cormorantupright-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "'Cormorant Upright'";
+  src: url('./fonts/cormorantupright-bold-webfont.woff2') format('woff2'),
+    url('./fonts/cormorantupright-bold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+$fonts: (
+  ff-body: (
+    "'Barlow'",
+    sans-serif,
+  ),
+  ff-header: (
+    "'Cormorant Upright'",
+    sans-serif,
+  ),
+  fw-normal: 400,
+  fw-med-bold: 600,
+  fw-bold: 700,
+  fs-base: 16px,
+  fs-h1: 2rem,
+  fs-h2: 1.5rem,
+  fs-h3: 1.17rem,
+  fs-h4: 1rem,
+  fs-h5: 0.83rem,
+  fs-h6: 0.67rem,
+  fs-text: 1rem,
+  fs-s: 0.83rem,
+  fs-xs: 0.67rem,
+  ms-base-ratio: 1.067,
+);
+
+$fs-mq: (
+  small: 320px,
+  large: 1200px,
+);
+
+// --Colors--
+$c-brand-one: #93d547;
+$c-brand-two: #fff629;
+
+$c-white: #fafafa;
+$c-light-grey: #eaeaea;
+$c-medium-grey: #979797;
+$c-dark-grey: #2f2f2f;
+$c-black: #1b1b1b;
+
+$c-error: #ff4d4d;
+$c-success: #4dff4d;
+$c-disable: $c-medium-grey;
+
+$c-interactive: $c-brand-one;
+
+$colors: (
+  c-brand-one: $c-brand-one,
+  c-brand-two: $c-brand-two,
+  c-white: $c-white,
+  c-light-grey: $c-light-grey,
+  c-medium-grey: $c-medium-grey,
+  c-dark-grey: $c-dark-grey,
+  c-black: $c-black,
+  c-error: $c-error,
+  c-success: $c-success,
+  c-disable-light: lighten($c-disable, 20%),
+  c-disable-dark: darken($c-disable, 30%),
+  c-interactive-light-2: lighten($c-interactive, 12%),
+  c-interactive-light-1: lighten($c-interactive, 8%),
+  c-interactive: $c-interactive,
+  c-interactive-dark-1: darken($c-interactive, 8%),
+  c-interactive-dark-2: darken($c-interactive, 12%),
+);
+
+// --Media queries--
+$mq: (
+  small: 400px,
+  med: 640px,
+  large: 900px,
+  wide: 1100px,
+  mega: 1800px,
+  ultra: 2800px,
+);
+
+// --Dimensions--
+$dimensions: (
+  logo-width: 3rem,
+  menu-ico-width: 22px,
+  menu-ico-line-height: 2px,
+  menu-ico-lines-space: 6px,
+  menu-ico-padding: 14px,
+  form-padding: 1rem,
+  form-input-padding: 2px,
+  form-bg-color: $c-light-grey,
+  form-width: 350px,
+);
+
+// CSS variables
+$vars: map-merge($colors, $dimensions);
+
+:root {
+  --ff-body: #{map-get($fonts, ff-body)};
+  --ff-header: #{map-get($fonts, ff-header)};
+  --fw-normal: #{map-get($fonts, fw-normal)};
+  --fw-med-bold: #{map-get($fonts, fw-med-bold)};
+  --fw-bold: #{map-get($fonts, fw-bold)};
+
+  @each $property, $value in $vars {
+    --#{$property}: #{$value};
+  }
+}
