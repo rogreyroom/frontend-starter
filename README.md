@@ -6,7 +6,7 @@ It's my static site frontend / design starter with basic setup of fonts, colors,
 
 - copy the repo
 - follow requirements and install
-- for developing use npm run dev or gulp dev
+- for developing use npm start or gulp dev
 - go to design.html to see setup of the project
 - for start tweak `_vars.scss_` to your needs
 - have fun
@@ -29,7 +29,7 @@ If not present then follow official gulp [Quick Start](https://gulpjs.com/docs/e
 
 ## Deployment
 
-Run `gulp build`
+Run `npm run build` or `gulp`
 
 The files from _public_ folder are ready to send to your server.
 
