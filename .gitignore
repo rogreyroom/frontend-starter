@@ -17,3 +17,7 @@ logs
 .npm
 .env
 .nuxt
+
+# Build files
+public/*
+!public/info.md
