@@ -14,7 +14,7 @@ const bsCreate = bSync.create();
 
 const paths = {
   public: {
-    del: 'public/**',
+    del: 'public/**/*',
     design: 'public/assets/css/design.min.css',
   },
   styles: {
@@ -39,7 +39,8 @@ const paths = {
   },
 };
 
-export const clean = () => del([paths.public.del, !paths.public.del / info.md]);
+export const clean = () =>
+  del([paths.public.del, !paths.public.del + 'info.md']);
 export const buildClean = () => del([paths.public.design]);
 
 function bs() {
