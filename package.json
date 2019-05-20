@@ -1,14 +1,14 @@
 {
-  "name": "design",
-  "version": "1.0.0",
-  "description": "## Getting Started",
-  "main": "gulpfile.js",
+  "name": "frontend-starter",
+  "version": "0.0.1",
+  "description": "It's my static site frontend / design starter with basic setup of fonts, colors, components and layouts. It is using Gulp 4 for development and build.",
+  "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Robert Adamczewski",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
