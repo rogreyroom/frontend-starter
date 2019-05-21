@@ -52,29 +52,18 @@ function bs() {
 }
 
 export function styles() {
-  return (
-    gulp
-      .src(paths.styles.src)
-      .pipe(sass())
-      .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
-      .pipe(cleanCSS())
-      // pass in options to the stream
-      .pipe(
-        rename({
-          basename: 'style',
-          suffix: '.min',
-        }),
-      )
-      .pipe(gulp.dest(paths.styles.dest))
-      .pipe(
-        rename({
-          basename: 'design',
-          suffix: '.min',
-        }),
-      )
-      .pipe(gulp.dest(paths.styles.dest))
-      .pipe(bsCreate.stream())
-  );
+  return gulp
+    .src(paths.styles.src)
+    .pipe(sass())
+    .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+    .pipe(cleanCSS())
+    .pipe(
+      rename({
+        suffix: '.min',
+      }),
+    )
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(bsCreate.stream());
 }
 
 export function scripts() {
@@ -117,6 +106,11 @@ const build = gulp.series(
   gulp.parallel(gulp.series(styles, buildClean), scripts, images, fonts, html),
 );
 
+const devBuild = gulp.series(
+  clean,
+  gulp.parallel(styles, scripts, images, fonts, html),
+);
+
 export default build;
 
-export const dev = gulp.series(build, gulp.parallel(watch, bs));
+export const dev = gulp.series(devBuild, gulp.parallel(watch, bs));
