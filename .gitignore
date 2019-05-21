@@ -21,3 +21,4 @@ logs
 # Build files
 public/*
 !public/info.md
+package-lock.json
